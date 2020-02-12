@@ -58,7 +58,7 @@ Take a look at the script `test.sh` in this repository. Notice the #SBATCH heade
 # When your job is done (or even while it is running, but be careful) you can look at this file.
 ```
 
-## Git user
+## Using git to download stuff
 If you have a repository hosted somewhere on the web (e.g., on GitHub or GitLab), you can clone it into a folder on your home directory using the login node (git repos are usually small - remember not to do big stuff on the login node). Git is already installed on the cluster. To get this repo on your home directory (including the test.sh script):
 ```
 git clone https://github.com/tethig/hamilton.git
@@ -86,9 +86,11 @@ With miniconda installed (this is small enough to do on the login node via the c
 This is required for execution because the conda environment manager is not called by default (since nodes do not source from your bash profile).
 
 ## Some guidance on HPC structure
-High bandwidth 100Gbps Infiniband
-Separate gigabit and management LANs
-Operating system: CentOS
+General:
+* High bandwidth 100Gbps Infiniband
+* Separate gigabit and management LANs
+* Operating system: CentOS
+
 Compute nodes:
 * 44 Intel-based compute nodes
 * 32 of these have 16 cores each
