@@ -58,10 +58,23 @@ Take a look at the script `test.sh` in this repository. Notice the #SBATCH heade
 # When your job is done (or even while it is running, but be careful) you can look at this file.
 ```
 
+## Git user
+If you have a repository hosted somewhere on the web (e.g., on GitHub or GitLab), you can clone it into a folder on your home directory using the login node (git repos are usually small - remember not to do big stuff on the login node). Git is already installed on the cluster. To get this repo on your home directory (including the test.sh script):
+```
+git clone https://github.com/tethig/hamilton.git
+```
+
+If something has changed in this repo and you want to update:
+```
+cd hamilton
+git pull
+```
+Note that making manual changes in git-enabled folders is not advised unless you are intending to push them up to a repo. It would break the symmetry. If that sounds like nonsense, don't worry for now, just don't write/delete any files inside the repo folder (hamilton in this case).
+
 ## Running scripts
 Simple:
 ```
-sbatch test.sh
+sbatch hamilton/test.sh
 ```
 or whatever your script is called. Then use the basic commands above to see when it be queued and/or executed.
 
@@ -75,6 +88,7 @@ This is required for execution because the conda environment manager is not call
 ## Some guidance on HPC structure
 High bandwidth 100Gbps Infiniband
 Separate gigabit and management LANs
+Operating system: CentOS
 Compute nodes:
 * 44 Intel-based compute nodes
 * 32 of these have 16 cores each
