@@ -13,6 +13,7 @@ There are strict rules to follow.
 1. No use for anything other than research work.
 2. Do not store any sensitive, irrelevant data.
 3. Do not over-use the login node.
+
 Note that the cluster is monitored and incorrect usage reported to a human being!
 
 ## Basic commands
