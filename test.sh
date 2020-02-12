@@ -4,7 +4,7 @@
 #SBATCH --time=0-0:1:0
 #SBATCH --mail-user=EMAIL HERE
 #SBATCH --mail-type=ALL
-#SBATCH --output=/users/bio3dickib/azure_up_%j.log
+#SBATCH --output=/users/n0000000/thinking_%j.log
 
 pwd; hostname; date
 echo "Starting job"
